@@ -1,7 +1,8 @@
 {
   "canonicalUrl": "https://about.wendyuncle.com/",
   "designSourceSlug": "raycast",
-  "generatedAt": "2026-08-13T03:04:44.201Z",
+  "generatedAt": "2026-08-13T15:01:48.278Z",
+  "publicJsLoaderUrl": "https://kol-js.pages.dev/loader.js",
   "siteId": "site-wendyuncle-com",
   "templateSlug": "personal-brand-command-dark",
   "templateVersion": "0.1.0"
