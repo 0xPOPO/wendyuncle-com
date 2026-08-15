@@ -72,62 +72,61 @@
   --social-shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.24);
   --social-ink: var(--ink);
 }
-body.template-personal-brand-command-dark {
+body.template-personal-brand-orbit-editorial {
 
-  color-scheme: dark;
-  --accent: #ff5f57;
-  --action-bg: #14161a;
-  --action-border: #333741;
-  --ambient: radial-gradient(circle at 20% 0%, rgba(255, 95, 87, 0.2), transparent 34%), linear-gradient(145deg, rgba(255, 95, 87, 0.14), transparent 260px);
-  --avatar-size: 88px;
-  --canvas: #0a0b0d;
-  --card-bg: #111319;
-  --card-border: #333741;
-  --card-shadow: rgba(0, 0, 0, 0.38) 0 20px 58px;
-  --cta-bg: #ffffff;
-  --cta-bg-hover: #f2f2f2;
-  --cta-border: #ffffff;
-  --cta-ink: #000000;
-  --headline-size: 52px;
-  --headline-size-mobile: 36px;
-  --headline-weight: 650;
-  --ink: #f4f4f6;
-  --link-bg: #16181d;
-  --link-bg-hover: #20232a;
-  --link-border: #333741;
-  --link-gap: 8px;
-  --link-icon-bg: #20232a;
-  --link-icon-bg-hover: #ff5f57;
-  --link-icon-ink-hover: #000000;
-  --link-meta: #9c9c9d;
-  --link-shadow-hover: 0 16px 34px rgba(255, 95, 87, 0.18);
-  --meta-bg: #16181d;
-  --meta-border: #333741;
-  --muted: #9c9c9d;
-  --panel-bg: #111319;
-  --panel-border: #333741;
-  --panel-padding: 16px;
-  --profile-align: start;
-  --profile-bg: transparent;
-  --profile-border: transparent;
-  --profile-button-outset: 16px;
-  --profile-padding: 16px 16px 0;
-  --profile-text-align: left;
-  --radius-action: 8px;
-  --radius-avatar: 12px;
-  --radius-card: 9px;
-  --radius-panel: 14px;
-  --section-gap: 0;
+  color-scheme: light;
+  --accent: #cf4500;
+  --action-bg: #fcfbfa;
+  --action-border: #d1cdc7;
+  --ambient: radial-gradient(circle at 14% 20%, rgba(243, 115, 56, 0.16), transparent 22%), radial-gradient(circle at 86% 8%, rgba(20, 20, 19, 0.08), transparent 24%), linear-gradient(180deg, #f3f0ee, #fcfbfa);
+  --avatar-size: 116px;
+  --bio-ink: #565656;
+  --canvas: #f3f0ee;
+  --card-bg: #fcfbfa;
+  --card-border: #d1cdc7;
+  --card-shadow: rgba(20, 20, 19, 0.09) 0 26px 66px;
+  --cta-bg: #141413;
+  --cta-bg-hover: #262627;
+  --cta-border: #141413;
+  --cta-ink: #f3f0ee;
+  --headline-size: 62px;
+  --headline-size-mobile: 38px;
+  --headline-weight: 500;
+  --ink: #141413;
+  --link-bg: #ffffff;
+  --link-bg-hover: #f4f4f4;
+  --link-border: #d1cdc7;
+  --link-gap: 12px;
+  --link-icon-bg: #f3f0ee;
+  --link-icon-bg-hover: #cf4500;
+  --link-icon-ink-hover: #ffffff;
+  --link-meta: #696969;
+  --link-shadow-hover: 0 16px 34px rgba(207, 69, 0, 0.15);
+  --meta-bg: #f4f4f4;
+  --meta-border: #d1cdc7;
+  --muted: #696969;
+  --panel-bg: #fcfbfa;
+  --panel-border: #d1cdc7;
+  --panel-padding: 20px;
+  --profile-bg: #ffffff;
+  --profile-border: #d1cdc7;
+  --profile-button-outset: 22px;
+  --profile-padding: 22px;
+  --radius-action: 999px;
+  --radius-avatar: 999px;
+  --radius-card: 999px;
+  --radius-panel: 40px;
+  --section-gap: 16px;
   --shell-padding-block: 44px 34px;
-  --shell-width: 720px;
-  --surface: #16181d;
-  --social-bg: #16181d;
-  --social-border: #333741;
-  --social-hover-bg: #ff5f57;
-  --social-hover-border: #ff5f57;
-  --social-hover-ink: #000000;
-  --social-ink: #f4f4f6;
-  --surface-2: #20232a;
+  --shell-width: 760px;
+  --surface: #fcfbfa;
+  --social-bg: #ffffff;
+  --social-border: #d1cdc7;
+  --social-hover-bg: #cf4500;
+  --social-hover-border: #cf4500;
+  --social-hover-ink: #ffffff;
+  --social-ink: #141413;
+  --surface-2: #f4f4f4;
   --cta-ink-hover: var(--cta-ink);
   --cta-icon-bg: color-mix(in srgb, var(--cta-ink), transparent 86%);
   --cta-icon-border: color-mix(in srgb, var(--cta-ink), transparent 72%);
@@ -309,12 +308,19 @@ footer span,
 }
 h1 {
   font-family: var(--display-font);
-  font-size: var(--headline-size);
+  font-size: min(var(--headline-size), 44px);
   font-weight: var(--headline-weight);
   letter-spacing: 0;
-  line-height: 1.02;
+  line-height: 1.08;
   margin: 0;
   overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+h1.headline-medium {
+  font-size: min(var(--headline-size), 40px);
+}
+h1.headline-long {
+  font-size: min(var(--headline-size), 34px);
 }
 .bio {
   color: var(--bio-ink, #d0d6e0);
@@ -842,7 +848,14 @@ footer a:hover {
     width: min(calc(100% - 24px), var(--shell-width));
   }
   h1 {
-    font-size: var(--headline-size-mobile);
+    font-size: min(var(--headline-size-mobile), 30px);
+    line-height: 1.1;
+  }
+  h1.headline-medium {
+    font-size: min(var(--headline-size-mobile), 28px);
+  }
+  h1.headline-long {
+    font-size: min(var(--headline-size-mobile), 25px);
   }
   .profile-card {
     padding: max(18px, calc(var(--card-padding) - 8px));
